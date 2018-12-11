@@ -5,38 +5,20 @@
  * Date: 11.12.2018
  * Time: 9:22
  */
-
-// Ülesanne 1
-/* Loo programm, mille sees:
-a) defineeritud muutujate abil
-    Sinu ees- ja perenimi
-    kursuse tähis
-    kursuse number
-    Sinu kooli email
-b) Väljastatud muutujate väärtused koos sobiva tekstiga html faili kujul
-*/
-
-$minuNimi = 'Elo-Maria Roots';
-$kursuseTähis = 'KD';
-$kursuseNumber = '18';
-$kooliEmail = 'elo-maria.roots@khk.ee';
-
+// muutujate defineerimine
+// $muutujaNimi = väärtus;
+$lehePealkiri = 'Katse leht';
+$sisuPealkiri = 'Muutujate defineerimine';
 // muutujate sisu testvaatamine
-var_dump($minuNimi);
+var_dump($lehePealkiri);
 echo '<br>';
-var_dump($kursuseTähis);
-echo '<br>';
-var_dump($kursuseNumber);
-echo '<br>';
-var_dump($kooliEmail);
-
+var_dump($sisuPealkiri);
 // andmetüübid
 $taisarv = 7;
 $reaalarv = -2.6;
 $tekst = 'Tere PHP';
 $toevaartusTrue = true;
 $toevaartusFalse = false;
-
 // väärtuse tüübi kontroll - gettype($muutujaNimi)
 // väärtuse tüübi teisendus - settype($muutujaNimi, 'tüüp')
 // väljastamine
@@ -45,10 +27,29 @@ echo '
     <!doctype html>
     <html>
         <head>
-            <title>'.$minuNimi.'</title>
+            <title>'.$lehePealkiri.'</title>
         </head>
         <body>
-            <h1>'.$kursuseTähis.'</h1>
-            <h3>'.$kursuseTähis.'</h3>
-            <h3>'.$kooliEmail.'</h3>
+            <h1>'.$sisuPealkiri.'</h1>
+            <h3>Andmetüübid</h3>
+            <ul>
+                <li>$taisarv = '.$taisarv.' - '.gettype($taisarv).'</li>
+                <li>$reaalarv = '.$reaalarv.' - '.gettype($reaalarv).'</li>
+                <li>$tekst = '.$tekst.' - '.gettype($tekst).'</li>
+                <li>$toevaartusTrue = '.$toevaartusTrue.' - '.gettype($toevaartusTrue).'</li>
+                <li>$toevaartusFalse = '.$toevaartusFalse.' - '.gettype($toevaartusFalse).'</li>
+            </ul>
             ';
+// tüübi teisendamise katse
+echo $taisarv.' + '.$taisarv.' = '.($taisarv + $taisarv);
+echo '<br>';
+settype($taisarv, 'string');
+echo $taisarv.' + '.$taisarv.' = '.($taisarv + $taisarv);
+echo '<br>';
+echo gettype($taisarv);
+// html lehe lõpp
+echo '
+        </body>
+    </html>
+';
+?>

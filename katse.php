@@ -37,6 +37,7 @@ if($naitaSisu == true) {
         echo 'Kõik on saladus!';
     }
 }
+
 // html lehe lõpp
 echo '
         </body>
