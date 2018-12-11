@@ -14,10 +14,10 @@ var_($lehePealkiri);
 echo '<br>;
 var_dump($sisuPealkiri);
 //andmetüübid
-$täisarv = 7;
+$taisarv = 7;
 $reaalarv = -2.6;
 $tekst = 'Tere PHP';
-$tõeväärtusTrue = true;
+$toeväärtusTrue = true;
 $tõeväärtusFalse = false;
 //väärtuse tüübi kontroll - gettype($muutujaNimi)
 //väärtuse tüübi teisendus - settype($muutujaNimi, 'tüüp')
@@ -33,12 +33,21 @@ echo  '
            <h1>'.sisuPealkiri.'</h1>
 <h3>Andmetüübid</h3>
 <ul>
-   <li>$täisarv = '.$täisarv.'</li>
+   <li>$taisarv = '.$täisarv.'</li>
    <li>$reaalarv = '.$reaalarv.'</li>
    <li>$tekst = '.@tekst.'</li>
    <li>$tõeväärtusTrue = '.$tõeväärtusTrue.'</li>
    <li>$tõeväärtusFalse = '.$tõeväärtusFalse.'</li>
 </ul>
+';
+//tüübi teisendamise katse
+echo $täisarv.' + ' = '.($taisarv + $taisarv);
+echo '<br>;
+settype($täisarv, 'string');
+echo '<br>;
+echo gettype($taisarv);
+//HTML lehe lõpp
+echo'
         </body>
     </html>
 ';
