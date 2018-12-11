@@ -1,10 +1,11 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: anna.karutina
- * Date: 06.12.2018
- * Time: 11:08
+ * User: elo-maria.roots
+ * Date: 11.12.2018
+ * Time: 9:22
  */
+
 // muutujate defineerimine
 // $muutujaNimi = väärtus;
 $lehePealkiri = 'Katse leht';
