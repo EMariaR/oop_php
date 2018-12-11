@@ -34,24 +34,31 @@ vastavalt määratud väärtusega. Katseta vähemalt kolme HTML värviga -
 red, blue, orange - vastavalt tingimuslauses määra punane, sinine ja orange
 */
 echo '<h4>Ülesanne 2</h4>';
-$varv = 'roheline';
+$varv = 'orange';
+echo '<p style="color: ';
 if($varv == 'punane'){
     echo '<p style="color: red;">Värviline tekst</p>';
 } else if($varv == 'sinine'){
     echo '<p style="color: blue;">Värviline tekst</p>';
-} else if($varv == 'orange'){
+} else if($varv == 'orange') {
     echo '<p style="color: orange;">Värviline tekst</p>';
 } else {
-    echo '<p>Värviline tekst</p>';
+    echo 'black';
 }
+echo  ';">Värviline tekst</p>';
+echo  '<hr>';
+
 
 echo  '<table style="border: 1px solid black; bprder-collapse: collapse; width: 300px;">';
-$ridadeArv = 4;
+$ridadeArv = 6;
 $veergudeArv = 5;
 for ($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++) {
     echo '<tr style="border: 1px solid black;">';
-    for ($veergudeArv = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
-        $varv = '#'.$reaNumber.$veeruNumber.$reaNumber.$veeruNumber;
+    for ($veeruNumber = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
+        $varv = '#';
+        for ($i = 1; $i <= 6; $i++) ´{
+            $varv = $varv.dechex(rand(o, 16));
+        }
         echo '<td style="text-align: center">';
         echo $reaNumber;
         echo '</td>';
