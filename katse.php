@@ -36,11 +36,14 @@ for($juhtimisM=algvaartus; $ juhtimisM < lõppväärtus; $juhtimisM++) {
 */
 echo  '<table style="border: 1px solid black; bprder-collapse: collapse; width: 300px;">';
 $ridadeArv = 4;
+$veergudeArv = 5;
 for ($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++) {
-    echo  '<tr style="border: 1px solid black;">';
-        echo '<td style="text-align: center">';
-        echo $reaNumber;
-        echo '</td>'
+    echo '<tr style="border: 1px solid black;">';
+    for ($veergudeArv = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
+    echo '<td style="text-align: center">';
+    echo $reaNumber;
+    echo '</td>'
+        }
     echo '</tr>';    
 }
 echo  '</table>';

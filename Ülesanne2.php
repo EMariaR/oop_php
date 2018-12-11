@@ -17,15 +17,16 @@ a) defineeritud muutujate abil
 b) Väljastatud muutujate väärtused koos sobiva tekstiga html faili kujul
 */
 echo '<h4>Ülesanne 1</h4>';
-$eesNimi = 'Anna';
-$pereNimi = 'Karutina';
+$eesNimi = 'Elo-Maria';
+$pereNimi = 'Roots';
 $osakond = 'IKT';
-$email = 'anna@ikt.khk.ee';
+$email = 'elo-maria.roots@khk.ee';
 echo 'Eesnimi '.$eesNimi.'<br>';
 echo 'Perenimi '.$pereNimi.'<br>';
 echo 'Osakond '.$osakond.'<br>';
 echo 'email '.$email.'<br>';
 echo '<hr>';
+
 // Ülesanne 2
 /* Loo muutuja nimega varv, mille algväärtuseks pane 'punane';
 Koosta if-else if- else lause, mis väljastab teksti "Värviline tekst"
@@ -43,4 +44,19 @@ if($varv == 'punane'){
 } else {
     echo '<p>Värviline tekst</p>';
 }
+
+echo  '<table style="border: 1px solid black; bprder-collapse: collapse; width: 300px;">';
+$ridadeArv = 4;
+$veergudeArv = 5;
+for ($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++) {
+    echo '<tr style="border: 1px solid black;">';
+    for ($veergudeArv = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
+        $varv = '#'.$reaNumber.$veeruNumber.$reaNumber.$veeruNumber;
+        echo '<td style="text-align: center">';
+        echo $reaNumber;
+        echo '</td>';
+        }
+    echo '</tr>';
+}
+echo  '</table>';
 echo '</body></html>';
