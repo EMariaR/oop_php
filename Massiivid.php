@@ -36,11 +36,18 @@ echo '<br>';
 // massiivi väljastamine for (alustame 0-st, siis viimane osa peab olema väiksem elementide arvust, seega < ilma =-ta)
 for($reaNumber = 0; $reaNumber < $ridadeArv; $reaNumber++) {
     for ($veeruNumber =0; $veeruNumber < $veergudeArv; $veeruNumber++){
-        echo $numbrid[$reaNumber][$veeruNumber].'&nbsp';
+        echo $numbrid[$reaNumber][$veeruNumber].'&nbsp;';
     }
     echo '<br>';
 }
 
+// massiivi väljastamine foreachi abil
+foreach ($numbrid as $rida) {
+    foreach ($rida as $number) {
+        echo $number.'&nbsp;';
+    }
+    echo '<br>';
+}
 
 
 function htmlTable($ridadeArv = 0, $veergudeArv = 0) {
