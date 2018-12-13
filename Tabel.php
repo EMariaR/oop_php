@@ -6,6 +6,8 @@
  * Time: 10:28
  */
 
+//See fail on tabelite tegemiseks kasutatav. Objekti kirjeldus.
+
 class Tabel
 {
     // klassi omadused
@@ -23,12 +25,13 @@ class Tabel
 
 
     /**
-     *vaata tabel massiiv  foreach abil ridade kaupa
+     * vaata tabel massiiv  foreach abil ridade kaupa ja väljasta iga rea sees olev element tühikuga eraldades
+     * read eralda reavahetusega
      */
     function  naitaTabel() {
         foreach ($this->tabel as $rida) {
             foreach ($rida as $element) {
-                echo $element.'<&nbsp;' ;
+                echo $element.'&nbsp;' ;
             }
             echo  '<br>';
         }
