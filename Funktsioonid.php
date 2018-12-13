@@ -18,14 +18,15 @@
 function htmlTable($ridadeArv = 0, $veergudeArv = 0) {
     echo '<table>';
     for($reaNumber =1; $reaNumber <= $ridadeArv; $reaNumber++) {
-        echo '<td>';
-          for ($veeruNumber =1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
-        echo $veeruNumber;
-        echo '</td>';
+        echo '<tr>';
+        for ($veeruNumber =1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
+            echo '<td>';
+            echo $veeruNumber;
+            echo '</td>';
+        }
+        echo '</tr>';
     }
-    echo '</tr>';
-}
-echo '</table>';
+    echo '</table>';
 }
 
 // lehe sisu väljastamine
@@ -34,8 +35,8 @@ echo '<!doctype html><html><head>
 <link rel="stylesheet" type="text/css" href="katsestyle.css">
 </head><body>';
 // kutsume funktsioon tööle
-htmlTabel(4, 4);
+htmlTable(4, 4);
 echo '<hr>';
-htmlTabel(2, 5);
+htmlTable(2, 5);
 echo '</body></html>';
 ?>
