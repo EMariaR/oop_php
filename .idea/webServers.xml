@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="536cf35e-e087-4f20-a786-2049b08ed598" name="ikt" url="http://elomariaroots.ikt.khk.ee">
+        <fileTransfer host="elomariaroots.ikt.khk.ee" port="22" rootFolder="/home/elomariarootsikt" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
