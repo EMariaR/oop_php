@@ -56,7 +56,7 @@ for ($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++) {
     echo '<tr style="border: 1px solid black;">';
     for ($veeruNumber = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
         $varv = '#';
-        for ($i = 1; $i <= 6; $i++) ´{
+        for ($i = 1; $i <= 6; $i++) {
             $varv = $varv.dechex(rand(o, 16));
         }
         echo '<td style="text-align: center">';

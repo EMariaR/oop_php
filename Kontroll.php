@@ -5,51 +5,119 @@
  * Date: 11.12.2018
  * Time: 9:22
  */
-// muutujate defineerimine
-// $muutujaNimi = väärtus;
-$lehePealkiri = 'Katse leht';
-$sisuPealkiri = 'Muutujate defineerimine';
-// muutujate sisu testvaatamine
-var_dump($lehePealkiri);
+
+echo '<html><head><title>Ülesanded</title></head><body>';
+// Ülesanne 1
+/* Loo programm, mille sees:
+a) defineeritud muutujate abil
+    Sinu ees- ja perenimi
+    kursuse tähis
+    kursuse number
+    Sinu kooli email
+b) Väljastatud muutujate väärtused koos sobiva tekstiga html faili kujul
+*/
+echo '<h4>Ülesanne 1</h4>';
+$eesNimi = 'Elo-Maria';
+$pereNimi = 'Roots';
+$osakond = 'IKT';
+$email = 'elo-maria.roots@khk.ee';
+echo 'Eesnimi '.$eesNimi.'<br>';
+echo 'Perenimi '.$pereNimi.'<br>';
+echo 'Osakond '.$osakond.'<br>';
+echo 'email '.$email.'<br>';
+echo '<hr>';
+
+// Ülesanne 2
+/* Loo muutuja nimega varv, mille algväärtuseks pane 'punane';
+Koosta if-else if- else lause, mis väljastab teksti "Värviline tekst"
+vastavalt määratud väärtusega. Katseta vähemalt kolme HTML värviga -
+red, blue, orange - vastavalt tingimuslauses määra punane, sinine ja orange
+*/
+echo '<h4>Ülesanne 2</h4>';
+$varv = 'orange';
+echo '<p style="color: ';
+if($varv == 'punane'){
+    echo '<p style="color: red;">Värviline tekst</p>';
+} else if($varv == 'sinine'){
+    echo '<p style="color: blue;">Värviline tekst</p>';
+} else if($varv == 'orange') {
+    echo '<p style="color: orange;">Värviline tekst</p>';
+} else {
+    echo 'black';
+}
+echo  ';">Värviline tekst</p>';
+echo  '<hr>';
+
+
+echo '<h4>Ülesanne 3</h4>';
+echo  '<table style="border: 1px solid black; bprder-collapse: collapse; width: 300px;">';
+$ridadeArv = 6;
+$veergudeArv = 5;
+for ($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++) {
+    echo '<tr style="border: 1px solid black;">';
+    for ($veeruNumber = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
+        $varv = '#';
+        for ($i = 1; $i <= 6; $i++) {
+            $varv = $varv.dechex(rand(o, 16));
+        }
+        echo '<td style="text-align: center">';
+        echo $reaNumber;
+        echo '</td>';
+    }
+    echo '</tr>';
+}
+echo  '</table>';
+echo '</body></html>';
+
+
+
+//Ülesanne 4
+
+echo '<!doctype html><html><head>
+<title>Massiivid</title>
+<link rel="stylesheet" type="text/css" href="katsestyle.css">
+</head><body>';
+
+echo '<h4>Ülesanne 4</h4>';
+echo  '<table>';
+$ridadeArv = 4;
+$veergudeArv = 5;
+for ($reaNumber = 1; $reaNumber <= $ridadeArv; $reaNumber++) {
+    echo '<tr>';
+    for ($veergudeArv = 1; $veeruNumber <= $veergudeArv; $veeruNumber++) {
+        echo '<td>';
+        echo $reaNumber;
+        echo '</td>';
+        }
+    echo '</tr>';
+}
+echo  '</table>';
+echo '</body></html>';
+
+function htmlTabel($massiiv) {
+    echo  '<table>';
+        for ($reaNumber = 0; $reaNumber < count($massiiv); $reaNumber++) {
+            echo '<tr>';
+            for ($veeruNumber = 0; $veeruNumber < count($massiiv[$reaNumber]); $veeruNumber++){
+                echo  '<td>';
+                echo $massiiv[$reaNumber][$veeruNumber];
+                echo '</td>';
+            }
+            echo '</tr>';
+        }
+    echo '</table>';
+}
+
+$numbrid = array (
+    array(1, 2, 3),
+    array(4, 5, 6)
+);
+htmlTabel($numbrid);
 echo '<br>';
-var_dump($sisuPealkiri);
-// andmetüübid
-$taisarv = 7;
-$reaalarv = -2.6;
-$tekst = 'Tere PHP';
-$toevaartusTrue = true;
-$toevaartusFalse = false;
-// väärtuse tüübi kontroll - gettype($muutujaNimi)
-// väärtuse tüübi teisendus - settype($muutujaNimi, 'tüüp')
-// väljastamine
-// ühendamine 'tekst katkeb '.$muutujaNimi.' tekst jätkub'
-echo '
-    <!doctype html>
-    <html>
-        <head>
-            <title>'.$lehePealkiri.'</title>
-        </head>
-        <body>
-            <h1>'.$sisuPealkiri.'</h1>
-            <h3>Andmetüübid</h3>
-            <ul>
-                <li>$taisarv = '.$taisarv.' - '.gettype($taisarv).'</li>
-                <li>$reaalarv = '.$reaalarv.' - '.gettype($reaalarv).'</li>
-                <li>$tekst = '.$tekst.' - '.gettype($tekst).'</li>
-                <li>$toevaartusTrue = '.$toevaartusTrue.' - '.gettype($toevaartusTrue).'</li>
-                <li>$toevaartusFalse = '.$toevaartusFalse.' - '.gettype($toevaartusFalse).'</li>
-            </ul>
-            ';
-// tüübi teisendamise katse
-echo $taisarv.' + '.$taisarv.' = '.($taisarv + $taisarv);
-echo '<br>';
-settype($taisarv, 'string');
-echo $taisarv.' + '.$taisarv.' = '.($taisarv + $taisarv);
-echo '<br>';
-echo gettype($taisarv);
-// html lehe lõpp
-echo '
-        </body>
-    </html>
-';
-?>
+$symbolid = array(
+    array('a', 'b'),
+    array('d', 'e'),
+    array('g', 'h')
+);
+htmlTabel($symbolid);
+echo '</body></html>';

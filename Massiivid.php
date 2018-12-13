@@ -27,7 +27,7 @@ echo $numbrid[1][1];
 echo '<br>';
 //massiivi suuruse kontroll - ridade arv siin
 $ridadeArv = count($numbrid);
-echo $ridadeArv
+echo $ridadeArv;
 //veergude arv
 $veergudeArv = count($numbrid[0]);
 echo $veergudeArv;
