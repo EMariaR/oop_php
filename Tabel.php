@@ -20,4 +20,17 @@ class Tabel
     function lisaRida($rida) {
         $this->tabel[] = $rida;
     }
+
+
+    /**
+     *vaata tabel massiiv  foreach abil ridade kaupa
+     */
+    function  naitaTabel() {
+        foreach ($this->tabel as $rida) {
+            foreach ($rida as $element) {
+                echo $element.'<&nbsp;' ;
+            }
+            echo  '<br>';
+        }
+    }
 }
