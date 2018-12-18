@@ -14,7 +14,16 @@ class Tabel
     var $tabel = array();
     var $rida = array();
 
+
     // klassi meetodid
+
+    /**
+     * Tabel constructor.
+     */
+    public function __construct()
+    {
+        echo 'Tabel tüüpi objekt on loodud<br>';
+    }
 
     /**
      * @param $rida - massiiv rea elementidega
